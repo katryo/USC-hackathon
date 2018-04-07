@@ -12,6 +12,7 @@ import { FormControlLabel, FormGroup } from "material-ui/Form";
 
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 import SimpleNestedList from "./SimpleNestedList";
+import SimpleTable from "./SimpleTable";
 
 function SimpleExpansionPanelDetails(props) {
   const values = ["aa", "bb"];
@@ -34,11 +35,10 @@ function SimpleExpansionPanels(props) {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
         <div>
-          <p>source IP: aaaaa</p>
-          <p>destination IP: aaaaa</p>
+          <SimpleTable />
           <FormGroup row>
             <FormControlLabel
-              control={<Switch value="checkedA" />}
+              control={<Switch value="allow" />}
               label="Allow sending/receiving this kind of packets?"
             />
           </FormGroup>
